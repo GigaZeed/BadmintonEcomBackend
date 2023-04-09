@@ -1,4 +1,4 @@
-const mongoose = required('mongoose');
+const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 let Product = new Schema({
@@ -12,7 +12,7 @@ let Product = new Schema({
         type:String
     }
 },{
-    collection: 'products'
+    collection: 'Products'
 })
 
 module.exports = mongoose.model('Product',Product)

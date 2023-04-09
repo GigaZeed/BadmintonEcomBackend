@@ -61,3 +61,5 @@ ProductRoute.route('/delete-product/:id').delete((req,res,next) =>{
         }
     })
 })
+
+module.exports = ProductRoute;
