@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-let Product = new Schema({
+const Product = new Schema({
     name:{
         type: String
     },
@@ -9,6 +9,9 @@ let Product = new Schema({
         type:String
     },
     description:{
+        type:String
+    },
+    pic:{
         type:String
     }
 },{
