@@ -5,7 +5,14 @@ const ContactRoute = express.Router();
 
 ContactRoute.route('/addcontact').post((req,res,next)=>{
 
-    Contact.create(req.body).then(result=>{
+    const Contacts = {
+        name:req.body.name,
+        email:req.body.email,
+        phone:req.body.phone,
+        textmessage:req.body.a
+    }
+    Contact.create(Contacts).then(result=>{
+        console.log(Contacts)
         console.log(result)
         res.json(result)
         }).catch(err=>{
