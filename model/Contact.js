@@ -5,7 +5,7 @@ const Contact = new Schema({
     name: { type: String },
     email: { type: String },
     phone: { type: String },
-    textmessage: { type: String }
+    message: { type: String }
 },{
     collection: 'Contact'
 })
