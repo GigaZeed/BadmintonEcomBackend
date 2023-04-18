@@ -2,9 +2,9 @@ const express = require('express');
 const app = express();
 
 const ProductRoute = express.Router();
-let Product = require('../model/Product');
+const Product = require('../model/Product');
 
-//Add book
+//Add Product
 ProductRoute.route('/add-product').post((req,res,next)=>{
     const latestProduct = Product.findOne({}, {}, { sort: { 'id': -1 } });
     const latestId = latestProduct ? latestProduct.id : '0'; // use '0' as default if no users exist yet
@@ -17,13 +17,6 @@ ProductRoute.route('/add-product').post((req,res,next)=>{
         console.log(err)
         res.send({err:"error ahhh"})
     })
-    // Product.create(req.body,(error,data) =>{
-    //     if(error){
-    //         return next(error);
-    //     } else{
-    //         res.json(data)
-    //     }
-    // })
 })
 //Get All Product Old
 // ProductRoute.route('/').get((req,res) =>{
