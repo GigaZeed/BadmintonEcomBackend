@@ -14,8 +14,8 @@ mongoose.connect(mongoDb.db,{
 }).catch((err)=>{
   console.log(err);
 })
-const ProductRoute = require('./routes/Productroutes')
-
+const ProductRoute = require('./routes/Productroutes');
+const ContactRoute = require('./routes/Contactroutes');
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -33,6 +33,8 @@ app.get('/', (req,res) => {
 //API Root
 app.use('/api',ProductRoute);
 const port = process.env.PORT || 8000;
+
+app.use('/api',ContactRoute);
 
 
 //404 Handler
