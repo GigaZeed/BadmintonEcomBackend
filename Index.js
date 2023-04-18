@@ -1,9 +1,9 @@
-let express = require('express')
-let path = require('path')
-let mongoose = require('mongoose')
-let cors = require('cors')
-let bodyParser = require('body-parser')
-let mongoDb = require('./database/db')
+const express = require('express')
+const path = require('path')
+const mongoose = require('mongoose')
+const cors = require('cors')
+const bodyParser = require('body-parser')
+const mongoDb = require('./database/db')
 //mongoose.set('useFindAndModify', false);
 mongoose.Promise = global.Promise;
 mongoose.connect(mongoDb.db,{
