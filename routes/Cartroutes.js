@@ -1,10 +1,10 @@
 const express = require('express');
-const Contact = require('../model/Contact');
-const ContactRoute = express.Router();
+const Cart = require('../model/Cart');
+const CartRoute = express.Router();
 
-ContactRoute.route('/addcontact').post((req,res,next)=>{
+CartRoute.route('/addcart').post((req,res,next)=>{
 
-    Contact.create(req.body).then(result=>{
+    Cart.create(req.body).then(result=>{
         console.log(req.body)
         //console.log(result)
         res.json(result)
@@ -14,4 +14,4 @@ ContactRoute.route('/addcontact').post((req,res,next)=>{
     })
 })
 
-module.exports = ContactRoute;
+module.exports = CartRoute;
