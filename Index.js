@@ -17,6 +17,7 @@ mongoose.connect(mongoDb.db,{
 const ProductRoute = require('./routes/Productroutes');
 const ContactRoute = require('./routes/Contactroutes');
 const CartRoute = require('./routes/Cartroutes');
+const UserRoute = require('./routes/Userroutes');
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -34,6 +35,7 @@ app.get('/', (req,res) => {
 //API Root
 app.use('/api',ProductRoute);
 app.use('/api',CartRoute);
+app.use('/api',UserRoute);
 const port = process.env.PORT || 8000;
 
 app.use('/api',ContactRoute);

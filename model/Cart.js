@@ -1,22 +1,16 @@
-
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
+
 const cartSchema = new Schema({
-  cartId: {
-    type: String,
-  },
-  products: [
+  cartproducts: [
     {
-      no: {
-        type: String,
-      },
       name: {
         type: String,
       },
-      image: {
+      pic: {
         type: String,
       },
-      description: {
+      descript: {
         type: String,
       },
       price: {
